@@ -19,7 +19,7 @@
     //     width: string
     // }
     type AreaString<T> = {
-        [key in keyof T] : string
+        [key in keyof T] : T[key]
     }
 
     const area1 : AreaString<{height:string, width: number}> ={
