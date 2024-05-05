@@ -9,10 +9,13 @@
 
     type Sheikh ={
         bike : string;
+        car : string;
+        ship : string;
     }
 
+    type checkVehicle<T> = T extends 'bike' | 'car' | 'ship' ? true : false 
 
-
+    type HasBike = checkVehicle<'car'>
 
 
 
